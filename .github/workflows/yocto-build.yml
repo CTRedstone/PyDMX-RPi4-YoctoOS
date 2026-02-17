@@ -22,6 +22,11 @@ jobs:
 
         - name: Create build directory
           run: |
+            echo "Current directory:"
+            pwd
+            echo "\nDirectory contents:"
+            ls -R .
+            echo "--------------------------------------------------"
             mkdir -p build
             cd poky
             source oe-init-build-env ../build
