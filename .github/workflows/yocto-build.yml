@@ -49,6 +49,23 @@ jobs:
               build/downloads
             key: yocto-${{ runner.os }}-${{ hashFiles('**/*.bb', '**/*.bbappend', '**/conf/*.conf') }}
 
+        - name: Check Directory contents
+          run: |
+            echo "meta pydmx contents:"
+            ls -a -R /home/runner/work/PyDMX-RPi4-YoctoOS/PyDMX-RPi4-YoctoOS/meta-pydmx
+            echo "===================="
+            echo "===================="
+            echo "pydmx recipe content"
+            ls -a -R /home/runner/work/PyDMX-RPi4-YoctoOS/PyDMX-RPi4-YoctoOS/meta-pydmx/recipes-pydmx
+            echo "===================="
+            echo "===================="
+            echo "Recipe pydmx pydmx"
+            ls -a -R /home/runner/work/PyDMX-RPi4-YoctoOS/PyDMX-RPi4-YoctoOS/meta-pydmx/recipes-pydmx/pydmx
+            echo "===================="
+            echo "===================="
+            echo "PyDMX files"
+            ls -a -R /home/runner/work/PyDMX-RPi4-YoctoOS/PyDMX-RPi4-YoctoOS/meta-pydmx/recipes-pydmx/pydmx/files
+
         - name: Build image
           run: |
             cd poky
