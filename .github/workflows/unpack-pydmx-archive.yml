@@ -14,7 +14,7 @@ jobs:
 
       - name: Unzip pydmx files
         run: |
-          ls -R -a
+          ls -R -a meta-pydmx
           cd meta-pydmx/recipes-pydmx/pydmx/files
           unzip Archiv.zip -d .
 
