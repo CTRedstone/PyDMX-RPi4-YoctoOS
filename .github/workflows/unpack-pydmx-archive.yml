@@ -25,5 +25,6 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add meta-pydmx/recipes-pydmx/pydmx/files
+          git add meta-pydmx
           git commit -m "Add pydmx files via GH Actions" || echo "No changes"
           git push
