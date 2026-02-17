@@ -1,0 +1,13 @@
+[Unit]
+Description=DMX Controller GUI
+After=network-online.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/opt/dmx/startx.sh
+WorkingDirectory=/opt/dmx
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
