@@ -15,7 +15,6 @@ jobs:
       - name: Unzip pydmx files
         run: |
           mkdir -p meta-pydmx/recipe-pydmx
-          mkdir -p meta-pydmx/recipe-pydmx/pydmx
           mv -f meta-pydmx/pydmx meta-pydmx/recipe-pydmx/pydmx
           ls -R -a meta-pydmx
           cd meta-pydmx/recipes-pydmx/pydmx/files
