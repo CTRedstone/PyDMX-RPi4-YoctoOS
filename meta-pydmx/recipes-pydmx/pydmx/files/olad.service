@@ -1,0 +1,10 @@
+[Unit]
+Description=Open Lighting Architecture Daemon
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/olad
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
