@@ -1,0 +1,30 @@
+From 79c3b7761bc63f42bdfbcc94b9cc6cca58b8a4a4 Mon Sep 17 00:00:00 2001
+From: Khem Raj <raj.khem@gmail.com>
+Date: Tue, 11 Aug 2020 21:19:22 -0700
+Subject: [PATCH] app: Use malloc_trim only on glibc
+
+musl does not implement it
+
+Upstream-Status: Pending
+Signed-off-by: Khem Raj <raj.khem@gmail.com>
+
+---
+ src/app/main.cpp | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/app/main.cpp b/src/app/main.cpp
+index 248fa8efef..12980f3b37 100644
+--- a/src/app/main.cpp
++++ b/src/app/main.cpp
+@@ -791,7 +791,11 @@ int main(int argc, char **argv)
+             m_trimTimer.setSingleShot(true);
+             m_trimTimer.setInterval(60000);
+             // glibc may not actually free memory in free().
++#ifdef __GLIBC__
+             connect(&m_trimTimer, &QTimer::timeout, this, [] { malloc_trim(0); });
++#else
++            connect(&m_trimTimer, &QTimer::timeout, this, [] { });
++#endif
+         }
+ 
+         bool eventFilter(QObject *, QEvent *e) override

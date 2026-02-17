@@ -1,0 +1,22 @@
+From 339af001155fd49f4f967dcf08664e247d258877 Mon Sep 17 00:00:00 2001
+From: Jani Suonpera <jani.suonpera@qt.io>
+Date: Thu, 4 Feb 2021 14:30:44 +0200
+Subject: [PATCH] chromium: Add missing include for C strncpy
+
+Task-number:QTBUG-90623
+---
+ .../mojo/public/cpp/platform/named_platform_channel_posix.cc     | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/chromium/mojo/public/cpp/platform/named_platform_channel_posix.cc b/chromium/mojo/public/cpp/platform/named_platform_channel_posix.cc
+index 9082ac4da59..24b21771d89 100644
+--- a/chromium/mojo/public/cpp/platform/named_platform_channel_posix.cc
++++ b/chromium/mojo/public/cpp/platform/named_platform_channel_posix.cc
+@@ -8,6 +8,7 @@
+ #include <sys/socket.h>
+ #include <sys/un.h>
+ #include <unistd.h>
++#include <cstring> // strncpy
+ 
+ #include "base/files/file_util.h"
+ #include "base/files/scoped_file.h"

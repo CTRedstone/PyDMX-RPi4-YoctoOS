@@ -1,0 +1,36 @@
+From 0701dd54b228e58b913d09e5a87f70de77575cc7 Mon Sep 17 00:00:00 2001
+From: Khem Raj <raj.khem@gmail.com>
+Date: Tue, 16 Jan 2018 13:26:57 +0000
+Subject: [PATCH] Link with libexecinfo on musl
+
+Upstream-Status: Pending
+Signed-off-by: Khem Raj <raj.khem@gmail.com>
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+
+---
+ src/plugins/debugger/debugger.pro             | 1 +
+ src/plugins/qmldesigner/qmldesignerplugin.pro | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/src/plugins/debugger/debugger.pro b/src/plugins/debugger/debugger.pro
+index 6c38efaca8..ba86639d72 100644
+--- a/src/plugins/debugger/debugger.pro
++++ b/src/plugins/debugger/debugger.pro
+@@ -137,3 +137,4 @@ include(console/console.pri)
+ include(analyzer/analyzer.pri)
+ 
+ include(shared/shared.pri)
++LIBS  *= -lexecinfo
+diff --git a/src/plugins/qmldesigner/qmldesignerplugin.pro b/src/plugins/qmldesigner/qmldesignerplugin.pro
+index 85a7685da5..d69cabcaaf 100644
+--- a/src/plugins/qmldesigner/qmldesignerplugin.pro
++++ b/src/plugins/qmldesigner/qmldesignerplugin.pro
+@@ -4,7 +4,7 @@ CONFIG += exceptions
+ INCLUDEPATH += $$PWD
+ INCLUDEPATH += $$PWD/components
+ 
+-unix:!openbsd:!osx: LIBS += -lrt # posix shared memory
++unix:!openbsd:!osx: LIBS += -lexecinfo -lrt # posix shared memory
+ 
+ include(../../qtcreatorplugin.pri)
+ 
