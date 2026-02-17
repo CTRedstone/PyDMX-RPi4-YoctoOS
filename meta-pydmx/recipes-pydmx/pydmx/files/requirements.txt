@@ -1,0 +1,11 @@
+PyQT5
+customtkinter
+darkdetect
+packaging
+requests
+urllib3
+idna
+certifi
+chardet
+pillow
+six

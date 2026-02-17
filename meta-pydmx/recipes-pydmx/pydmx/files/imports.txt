@@ -1,0 +1,15 @@
+os
+time
+random
+socket
+multiprocessing
+threading
+tkinter
+PyQt5
+qtCompCTk
+jsonWin
+customtkinter
+largefont
+olaTerminal
+rgbMatrix
+prgbarWin

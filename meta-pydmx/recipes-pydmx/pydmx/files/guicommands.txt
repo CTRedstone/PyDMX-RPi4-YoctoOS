@@ -1,0 +1,13 @@
+edit preference {gui/framework | show/name | dmx/server/addr | dmx/server/port}
+edit macro <location_x>x<location_y>
+new macro <location_x>x<location_y>
+edit fixture <name>
+new fixture
+new fixture <name> <Channels split with ";"> ( addr=0 universe=0 )
+var set <name> <type { int | float | str }> ( <value> ) -> If <value> is not set, the command will open a GUI
+var get <name>
+var calc <name> <operation { * | / | + | - }> <number>
+wait <time in seconds>
+delete macro <location_x>x<location_y>
+!IF <variable> <operation { == | != | < | > | <= | >= | not }> <other value to compare, can't contain spaces> <action { !RUN | !RETURN }
+INFO: In every command, variables can be used as well. Then, the variable name has to be written with a "$" before, so it would be "$varname". The same works with fixtures. Here you have to write "fixt=fixurename", where you can replace "fixturename" with the name of your fixture. That will replace the "addr" and "universe" parameter. Where multiple fixtures are needed fore one argument, you can also write [§fixtname,§fixture2,]. The channel is added like "fixturename.channel". Also, clicking a macro button with the right mouse button will add the position of the macro button to the command for easier command usage.

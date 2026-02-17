@@ -1,0 +1,87 @@
+{
+	"cues": {
+		"cue0": {
+			"name": "Cue 1",
+			"active": false
+		},
+		"cue1": {
+			"name": "Cue 2",
+			"active": false
+		},
+		"cue2": {
+			"name": "Cue 3",
+			"active": false
+		},
+		"cue3": {
+			"name": "Cue 4",
+			"active": false
+		},
+		"cue4": {
+			"name": "Cue 5",
+			"active": false
+		},
+		"cue5": {
+			"name": "Cue 6",
+			"active": false
+		},
+		"cue6": {
+			"name": "Cue 7",
+			"active": false
+		},
+		"cue7": {
+			"name": "Cue 8",
+			"active": false
+		},
+		"cue8": {
+			"name": "Cue 9",
+			"active": false
+		},
+		"cue9": {
+			"name": "Cue 10",
+			"active": false
+		}
+	},
+	"macros": {
+		"macro0": {
+			"name": "Macro 1",
+			"active": false
+		},
+		"macro1": {
+			"name": "Macro 2",
+			"active": false
+		},
+		
+		"macro2": {
+			"name": "Macro 3",
+			"active": false
+		},
+		"macro3": {
+			"name": "Macro 4",
+			"active": false
+		},
+		"macro4": {
+			"name": "Macro 5",
+			"active": false
+		},
+		"macro5": {
+			"name": "Macro 6",
+			"active": false
+		},
+		"macro6": {
+			"name": "Macro 7",
+			"active": false
+		},
+		"macro7": {
+			"name": "Macro 8",
+			"active": false
+		},
+		"macro8": {
+			"name": "Macro 9",
+			"active": false
+		},
+		"macro9": {
+			"name": "Macro 10",
+			"active": false
+		}
+	}
+}

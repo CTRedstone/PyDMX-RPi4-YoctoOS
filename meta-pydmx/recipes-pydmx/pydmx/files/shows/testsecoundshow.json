@@ -1,0 +1,1 @@
+{"patch": {"fixtures": []}, "cues": {"cuelist0": {"name": "Dim1", "active": false, "loop": true, "cues": [{"events": [{"universe": "0", "address": "1", "level": 255}], "wait": 1000}, {"events": [{"universe": "0", "address": "1", "level": 0}], "wait": 1000}]}}, "macros": {"macro0": {"name": "Macro 1", "active": false}}}

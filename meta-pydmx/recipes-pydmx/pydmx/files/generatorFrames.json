@@ -1,0 +1,723 @@
+[
+	{
+		"type": "CTkFrame",
+		"name": "macroEditFrm",
+		"group": "root",
+		"master": "win1",
+		"options": {},
+		"grid": {
+			"row": 2,
+			"column": 0,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "macroEditTitleLbl",
+		"group": "macroEditor",
+		"master": "macroEditFrm",
+		"options": {
+			"text": "Edit Macro",
+			"font": ["Roboto",25]
+		},
+		"grid": {
+			"row": 0,
+			"column": 0,
+			"columnspan": 5,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "macroEditNameLbl",
+		"group": "macroEditor",
+		"master": "macroEditFrm",
+		"options": {
+			"text": "Name of macro: "
+		},
+		"grid": {
+			"row": 1,
+			"column": 0,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkEntry",
+		"name": "macroEditNameEnt",
+		"group": "macroEditor",
+		"master": "macroEditFrm",
+		"options": {
+			"placeholder_text": "Name of Macro"
+		},
+		"grid": {
+			"row": 1,
+			"column": 1,
+			"columnspan": 2,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkTextbox",
+		"name": "macroEditScriptTB",
+		"group": "macroEditor",
+		"master": "macroEditFrm",
+		"options": {
+			"wrap": "none"
+		},
+		"grid": {
+			"row": 2,
+			"rowspan": 20,
+			"column": 0,
+			"columnspan": 5,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	
+	{
+		"type": "CTkFrame",
+		"name": "cuelistEditFrm",
+		"group": "root",
+		"master": "win1",
+		"options": {},
+		"grid": {
+			"row": 2,
+			"column": 0,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "cuelistEditTitleLbl",
+		"group": "cuelistEditor",
+		"master": "cuelistEditFrm",
+		"options": {
+			"text": "Edit Cuelist",
+			"font": ["Roboto",25]
+		},
+		"grid": {
+			"row": 0,
+			"column": 0,
+			"columnspan": 5,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "cuelistNameEditLbl",
+		"group": "cuelistEditor",
+		"master": "cuelistEditFrm",
+		"options": {
+			"text": "Name of cuelist: "
+		},
+		"grid": {
+			"row": 1,
+			"column": 0,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkEntry",
+		"name": "cuelistNameEditEnt",
+		"group": "cuelistEditor",
+		"master": "cuelistEditFrm",
+		"options": {
+			"placeholder_text": "Cuelist name"
+		},
+		"grid": {
+			"row": 1,
+			"column": 1,
+			"columnspan": 2,
+			"sticky": "W",
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "cuelistEditCuelistLoopLbl",
+		"group": "cuelistEditor",
+		"master": "cuelistEditFrm",
+		"options": {
+			"text": "Loop cuelist when finished: "
+		},
+		"grid": {
+			"row": 2,
+			"column": 0,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkCheckBox",
+		"name": "cuelistEditCuelistLoopCB",
+		"group": "cuelistEditor",
+		"master": "cuelistEditFrm",
+		"options": {
+			"text": ""
+		},
+		"grid": {
+			"row": 2,
+			"column": 1,
+			"sticky": "W",
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	
+	{
+		"type": "CTkScrollableFrame",
+		"name": "cuelistEditCuesListFrm",
+		"group": "cuelistEditor",
+		"master": "cuelistEditFrm",
+		"options": {
+			"orientation": "vertical"
+		},
+		"grid": {
+			"row": 3,
+			"column": 0,
+			"columnspan": 5,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "cuelistListNameTitleLbl",
+		"group": "cuelistEditor",
+		"master": "cuelistEditFrm",
+		"options": {
+			"text": "Name",
+			"fg_color": "#868686",
+			"text_color": "#E0E0E0"
+		},
+		"grid": {
+			"row": 0,
+			"column": 0,
+			"pady": 0,
+			"padx": 0
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "cuelistListFadeInTitleLbl",
+		"group": "cuelistEditor",
+		"master": "cuelistEditFrm",
+		"options": {
+			"text": "FadeIn (s)",
+			"fg_color": "#868686",
+			"text_color": "#E0E0E0"
+		},
+		"grid": {
+			"row": 0,
+			"column": 1,
+			"pady": 0,
+			"padx": 0
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "cuelistListFadeOutTitleLbl",
+		"group": "cuelistEditor",
+		"master": "cuelistEditFrm",
+		"options": {
+			"text": "FadeOut (s)",
+			"fg_color": "#868686",
+			"text_color": "#E0E0E0"
+		},
+		"grid": {
+			"row": 0,
+			"column": 2,
+			"pady": 0,
+			"padx": 0
+		}
+	},
+	{
+		"type": "CTkEntry",
+		"name": "cuelistListCueNameEnt",
+		"group": "cuelistEditor",
+		"master": "cuelistEditFrm",
+		"options": {
+			"placeholder_text": "Cuename",
+			"corner_radius": 0,
+			"border_color": "#868686",
+			"fg_color": "#868686",
+			"text_color": "#E0E0E0"
+		},
+		"grid": {
+			"row": 1,
+			"column": 0,
+			"pady": 0,
+			"padx": 0
+		}
+	},
+	{
+		"type": "CTkEntry",
+		"name": "cuelistListCueFadeInTimeEnt",
+		"group": "cuelistEditor",
+		"master": "cuelistEditFrm",
+		"options": {
+			"placeholder_text": "FadeIn Time (s)",
+			"corner_radius": 0,
+			"border_color": "#868686",
+			"fg_color": "#868686",
+			"text_color": "#E0E0E0"
+		},
+		"grid": {
+			"row": 1,
+			"column": 1,
+			"pady": 0,
+			"padx": 0
+		}
+	},
+	{
+		"type": "CTkEntry",
+		"name": "cuelistListCueFadeOutTimeEnt",
+		"group": "cuelistEditor",
+		"master": "cuelistEditFrm",
+		"options": {
+			"placeholder_text": "FadeOut Time (s)",
+			"fg_color": "#868686",
+			"text_color": "#E0E0E0"
+		},
+		"grid": {
+			"row": 1,
+			"column": 2,
+			"pady": 0,
+			"padx": 0
+		}
+	},
+	{
+		"type": "CTkButton",
+		"name": "cuelistListCueFixtureValuesEditBtn",
+		"group": "cuelistEditor",
+		"master": "cuelistEditFrm",
+		"options": {
+			"text": "Edit Fixture Values",
+			"corner_radius": 0,
+			"border_color": "#868686",
+			"fg_color": "#868686",
+			"text_color": "#E0E0E0"
+		},
+		"grid": {
+			"row": 1,
+			"column": 3,
+			"pady": 0,
+			"padx": 0
+		}
+	},
+	
+	{
+		"type": "CTkFrame",
+		"name": "fxEditFrm",
+		"group": "root",
+		"master": "win1",
+		"options": {},
+		"grid": {
+			"row": 2,
+			"column": 0,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "fxEditTitleLbl",
+		"group": "fxEditor",
+		"master": "fxEditFrm",
+		"options": {
+			"text": "Edit FX",
+			"font": ["Roboto",25]
+		},
+		"grid": {
+			"row": 0,
+			"column": 0,
+			"columnspan": 5,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "fxNameEditLbl",
+		"group": "fxEditor",
+		"master": "fxEditFrm",
+		"options": {
+			"text": "Name of FX: "
+		},
+		"grid": {
+			"row": 1,
+			"column": 0,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkEntry",
+		"name": "fxNameEditEnt",
+		"group": "fxEditor",
+		"master": "fxEditFrm",
+		"options": {
+			"placeholder_text": "Name of FX"
+		},
+		"grid": {
+			"row": 1,
+			"column": 1,
+			"columnspan": 2,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "fxTypeEditLbl",
+		"group": "fxEditor",
+		"master": "fxEditFrm",
+		"options": {
+			"text": "Edit FX Type: "
+		},
+		"grid": {
+			"row": 2,
+			"column": 0,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkOptionMenu",
+		"name": "fxTypeEditOMne",
+		"group": "fxEditor",
+		"master": "fxEditFrm",
+		"options": {
+			"values": [
+				"choose Type",
+				"sin",
+				"cos",
+				"triangle",
+				"fadeOn",
+				"fadeOff",
+				"default (High-Low)"
+			]
+		},
+		"grid": {
+			"row": 2,
+			"column": 1,
+			"columnspan": 2,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkScrollableFrame",
+		"name": "fxOptionsEditorSFrm",
+		"group": "fxEditor",
+		"master": "fxEditFrm",
+		"options": {
+			"border_width": 2,
+			"border_color": "#DBDBDB",
+			"corner_radius": 3
+		},
+		"grid": {
+			"row": 3,
+			"column": 0,
+			"columnspan": 5,
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkButton",
+		"name": "fxGenerateBtn",
+		"group": "fxEditor",
+		"master": "fxEditFrm",
+		"options": {
+			"text": "Generate FX"
+		},
+		"grid": {
+			"row": 4,
+			"column": 1,
+			"columnspan": 2,
+			"sticky": "w",
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	{
+		"type": "CTkButton",
+		"name": "fxPreviewBtn",
+		"group": "fxEditor",
+		"master": "fxEditFrm",
+		"options": {
+			"text": "Preview FX"
+		},
+		"grid": {
+			"row": 4,
+			"column": 3,
+			"columnspan": 2,
+			"sticky": "w",
+			"pady": 2,
+			"padx": 5
+		}
+	},
+	
+	{
+		"type": "CTkLabel",
+		"name": "fxOptionsUniverseLbl",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"text": "Univ",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#454545",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 0,
+			"column": 0
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "fxOptionsAddrLbl",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"text": "Addr",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#454545",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 0,
+			"column": 1
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "fxOptionsStartLbl",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"text": "Start",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#454545",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 0,
+			"column": 2
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "fxOptionsEndLbl",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"text": "End",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#454545",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 0,
+			"column": 3
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "fxOptionsStpHighLbl",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"text": "stpHigh",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#454545",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 0,
+			"column": 4
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "fxOptionsStpLowLbl",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"text": "stpLow",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#454545",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 0,
+			"column": 5
+		}
+	},
+	{
+		"type": "CTkLabel",
+		"name": "fxOptionsSpeedLbl",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"text": "Speed",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#454545",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 0,
+			"column": 6
+		}
+	},
+	
+	{
+		"type": "CTkEntry",
+		"name": "fxOptionsUniverseEnt",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"placeholder_text": "",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#202020",
+			"text_color": "#DBDBDB",
+			"border_color": "#202020",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 1,
+			"column": 0
+		}
+	},
+	{
+		"type": "CTkEntry",
+		"name": "fxOptionsAddrEnt",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"placeholder_text": "",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#202020",
+			"text_color": "#DBDBDB",
+			"border_color": "#202020",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 1,
+			"column": 1
+		}
+	},
+	{
+		"type": "CTkEntry",
+		"name": "fxOptionsStartEnt",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"placeholder_text": "",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#202020",
+			"text_color": "#DBDBDB",
+			"border_color": "#202020",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 1,
+			"column": 2
+		}
+	},
+	{
+		"type": "CTkEntry",
+		"name": "fxOptionsEndEnt",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"placeholder_text": "",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#202020",
+			"text_color": "#DBDBDB",
+			"border_color": "#202020",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 1,
+			"column": 3
+		}
+	},
+	{
+		"type": "CTkEntry",
+		"name": "fxOptionsStpHighEnt",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"placeholder_text": "",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#202020",
+			"text_color": "#DBDBDB",
+			"border_color": "#202020",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 1,
+			"column": 4
+		}
+	},
+	{
+		"type": "CTkEntry",
+		"name": "fxOptionsStpLowEnt",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"placeholder_text": "",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#202020",
+			"text_color": "#DBDBDB",
+			"border_color": "#202020",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 1,
+			"column": 5
+		}
+	},
+	{
+		"type": "CTkEntry",
+		"name": "fxOptionsSpeedEnt",
+		"group": "fxEditor",
+		"master": "fxOptionsEditorSFrm",
+		"options": {
+			"placeholder_text": "",
+			"width": 70,
+			"height": 20,
+			"fg_color": "#202020",
+			"text_color": "#DBDBDB",
+			"border_color": "#202020",
+			"corner_radius": 0
+		},
+		"grid": {
+			"row": 1,
+			"column": 6
+		}
+	}
+]
