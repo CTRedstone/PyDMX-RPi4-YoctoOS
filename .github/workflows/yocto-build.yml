@@ -1,0 +1,52 @@
+name: Yocto Build
+
+on:
+    workflow_dispatch:
+
+jobs:
+    build:
+        runs-on: ubuntu-22.04
+
+        steps:
+        - name: Checkout repo
+          uses: actions/checkout@4
+          with:
+            submodules: recursive
+
+        - name: Install build dependencies
+          run: |
+            sudo apt-get update
+            sudo apt-get install -y gawk wget git diffstat unzip texinfo gcc \
+              build-essential chrpath socat cpio python3 python3-pip python3-pexpect \
+              xz-utils debianutils iputils-ping libsdl1.2-dev xterm zstd lz4
+
+        - name: Create build directory
+          run: |
+            mkdir -p build
+            cd build
+            source ../poky/oe-init-build-env .
+
+        - name: Copy local.conf and bblayers.conf
+          run: |
+            cp .github/yocto-config/local.conf build/conf/local.conf
+            cp .github/yocto-config/bblayers.conf build/conf/bblayers.conf
+
+        - name: Restore sstate cache
+          uses: actions/cache@v4
+          with:
+            path: |
+              build/sstate-cache
+              build/downloads
+            key: yocto-${{ runner.os }}-${{ hashFiles('**/*.bb', '**/*.bbappend', '**/conf/*.conf') }}
+
+        - name: Build image
+          run |
+            cd build
+            source ../poky/oe-init-build-env .
+            bitbake pydmx-image
+
+        - name: Upload image artifact
+          uses: actions/upload-artifact@v4
+          with:
+            name: pydmx-image
+            path: build/tmp/deploy/images/raspberrypi4/*.rpi-sdimg
