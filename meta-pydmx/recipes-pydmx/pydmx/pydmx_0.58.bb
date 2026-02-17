@@ -20,22 +20,12 @@ SRC_URI = "file://__main__.py \
            file://minecraftia.ttf \
            file://olaTerminal.py \
            file://prgbarWin.py \
-           file://six.py \
            file://updater.py \
-           file://certifi \
-           file://chardet \
-           file://darkdetect \
-           file://idna \
-           file://packaging \
-           file://Pillow-8.1.2.egg-info \
-           file://PyQt5 \
            file://pytools \
-           file://requests \
            file://resources \
            file://rgbmatrix \
            file://rgbMatrix \
            file://shows \
-           file://urllib3 \
            file://customtkinter \
            file://olad.service"
 
@@ -50,21 +40,12 @@ RDEPENDS:${PN} = "python3-core python3-tkinter python3-requests python3-random p
 do_install() {
 	install -d ${D}/opt/pydmx
 	cp -r ${WORKDIR}/*.py ${D}/opt/pydmx/
-	cp -r ${WORKDIR}/certify ${D}/opt/pydmx/
-	cp -r ${WORKDIR}/chardet ${D}/opt/pydmx/
 	cp -r ${WORKDIR}/customtkinter ${D}/opt/pydmx/
-	cp -r ${WORKDIR}/darkdetect ${D}/opt/pydmx/
-	cp -r ${WORKDIR}/idna ${D}/opt/pydmx/
-	cp -r ${WORKDIR}/packaging ${D}/opt/pydmx/
-	cp -r ${WORKDIR}/Pillow-8.1.2.egg-info ${D}/opt/pydmx/
-	cp -r ${WORKDIR}/PyQt5 ${D}/opt/pydmx/
 	cp -r ${WORKDIR}/pytools ${D}/opt/pydmx/
-	cp -r ${WORKDIR}/requests ${D}/opt/pydmx/
 	cp -r ${WORKDIR}/resources ${D}/opt/pydmx/
 	cp -r ${WORKDIR}/rgbmatrix ${D}/opt/pydmx/
 	cp -r ${WORKDIR}/rgbMatrix ${D}/opt/pydmx/
 	cp -r ${WORKDIR}/shows ${D}/opt/pydmx/
-	cp -r ${WORKDIR}/urllib3 ${D}/opt/pydmx/
 	cp -r ${WORKDIR}/config.new.json ${D}/opt/pydmx/
 	cp -r ${WORKDIR}/guicommands.txt ${D}/opt/pydmx/
 	cp -r ${WORKDIR}/imports.txt ${D}/opt/pydmx/
