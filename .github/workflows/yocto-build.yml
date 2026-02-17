@@ -24,11 +24,16 @@ jobs:
           run: |
             echo "Current directory:"
             pwd
-            echo "\nDirectory contents:"
-            ls -R .
+            echo "Directory contents:"
+            ls -R
             echo "--------------------------------------------------"
             mkdir -p build
             cd poky
+            echo "Current directory after dir change:"
+            pwd
+            echo "Directory contents:"
+            ls -R
+            echo "--------------------------------------------------"
             source oe-init-build-env ../build
 
         - name: Copy local.conf and bblayers.conf
