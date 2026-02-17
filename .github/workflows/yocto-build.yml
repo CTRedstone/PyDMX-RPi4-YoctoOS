@@ -40,7 +40,7 @@ jobs:
             key: yocto-${{ runner.os }}-${{ hashFiles('**/*.bb', '**/*.bbappend', '**/conf/*.conf') }}
 
         - name: Build image
-          run |
+          run: |
             cd build
             source ../poky/oe-init-build-env .
             bitbake pydmx-image
