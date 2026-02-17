@@ -1,4 +1,4 @@
-name: Yocto Build
+name: Yocto Build 
 
 on:
     workflow_dispatch:
@@ -23,8 +23,8 @@ jobs:
         - name: Create build directory
           run: |
             mkdir -p build
-            cd build
-            source ../poky/oe-init-build-env .
+            cd poky
+            source oe-init-build-env ../build
 
         - name: Copy local.conf and bblayers.conf
           run: |
@@ -41,8 +41,8 @@ jobs:
 
         - name: Build image
           run: |
-            cd build
-            source ../poky/oe-init-build-env .
+            cd poky
+            source oe-init-build-env ../build
             bitbake pydmx-image
 
         - name: Upload image artifact
