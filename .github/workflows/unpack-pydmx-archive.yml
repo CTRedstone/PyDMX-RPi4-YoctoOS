@@ -14,13 +14,13 @@ jobs:
 
       - name: Unzip pydmx files
         run: |
-          cd /home/runner/work/PyDMX-RPi4-YoctoOS/PyDMX-RPi4-YoctoOS/meta-pydmx/recipes-pydmx/pydmx/files
+          cd meta-pydmx/recipes-pydmx/pydmx/files
           unzip Archiv.zip -d .
 
       - name: Commit changes
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add /home/runner/work/PyDMX-RPi4-YoctoOS/PyDMX-RPi4-YoctoOS/meta-pydmx/recipes-pydmx/pydmx/files
+          git add meta-pydmx/recipes-pydmx/pydmx/files
           git commit -m "Add pydmx files via GH Actions" || echo "No changes"
           git push
