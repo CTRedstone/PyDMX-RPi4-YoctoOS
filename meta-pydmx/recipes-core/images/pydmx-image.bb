@@ -11,8 +11,9 @@ IMAGE_INSTALL = "\
     python3-math \
     xserver-xorg \
     xinit \
-    openbox"
+    openbox \
+    psplash"
 
 IMAGE_FEATURES += " splash"
 
-inherit cure-image
+inherit core-image
