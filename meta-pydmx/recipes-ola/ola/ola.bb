@@ -2,7 +2,7 @@ DESCRIPTION = "Open Lighting Architecture (OLA)"
 HOMEPAGE = "https://www.openlighting.org/ola/"
 LICENSE = "GPL-2.0-or-later"
 LIC_FILES_CHKSUM = "file://COPYING;md5=751419260aa954499f7abaabaa882bbe"
-SRCREV = "c8f3f4c9f2f4f0d8e8e8e2c6c1f1a8b9c6b0f3d"
+SRCREV = "9b7f0b0c8a6b3d4c4c4f4c2b8d4e2c6f7a1b9e2a"
 
 SRC_URI = "git://github.com/OpenLightingProject/ola.git;branch=master;protocol=https"
 S = "${WORKDIR}/git"
