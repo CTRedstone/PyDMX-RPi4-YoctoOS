@@ -35,7 +35,7 @@ inherit systemd
 
 SYSTEMD_SERVICE:${PN} = "pydmx.service"
 
-RDEPENDS:${PN} = "python3-core python3-tkinter python3-requests python3-random python3-math xserver-xorg xinit openbox ola"
+RDEPENDS:${PN} = "python3-core python3-tkinter python3-requests python3-math xserver-xorg xinit openbox ola"
 
 do_install() {
 	install -d ${D}/opt/pydmx
