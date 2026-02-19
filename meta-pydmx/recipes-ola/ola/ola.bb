@@ -2,11 +2,11 @@ DESCRIPTION = "Open Lighting Architecture (OLA)"
 LICENSE = "GPL-2.0-or-later"
 LIC_FILES_CHKSUM = "file://COPYING;md5=751419260aa954499f7abaabaa882bbe"
 
-SRC_URI = "git://github.com/OpenLightingProject/ola.git;branch=master;protocol=https"
+SRC_URI = "git://github.com/OpenLightingProject/ola.git;branch=master;protocol=https;destsuffix=git"
 SRCREV = "${AUTOREV}"
 
 PV = "1.0+git${SRCPV}"
-S = "${WORKDIR}/git"
+S = "${WORKDIR}/git/"
 
 inherit cmake pkgconfig
 
