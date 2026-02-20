@@ -6,7 +6,7 @@ SRC_URI = "git://github.com/OpenLightingProject/ola.git;branch=master;protocol=h
 SRCREV = "${AUTOREV}"
 
 PV = "1.0+git${SRCPV}"
-S = "${WORKDIR}/git/"
+S = "${WORKDIR}/git"
 
 inherit cmake pkgconfig
 
