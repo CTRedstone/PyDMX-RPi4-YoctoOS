@@ -10,7 +10,7 @@ S = "${WORKDIR}/git"
 
 inherit autotools pkgconfig
 
-DEPENDS = "protobuf protobuf-native libmicrohttpd"
+DEPENDS = "protobuf protobuf-native libmicrohttpd bison-native"
 
 # Options aren't recognized by OLA
 #EXTRA_OECONF += " --disable-cpp-lint --disable-python-lint --disable-gcov --disable-gcovr"
