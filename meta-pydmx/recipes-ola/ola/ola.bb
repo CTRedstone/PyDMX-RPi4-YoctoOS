@@ -12,7 +12,11 @@ inherit autotools pkgconfig
 
 DEPENDS = "protobuf protobuf-native libmicrohttpd"
 
-EXTRA_OECONF += " --disable-cpp-lint --disable-python-lint --disable-gcov --disable-gcovr"
+# Options aren't recognized by OLA
+#EXTRA_OECONF += " --disable-cpp-lint --disable-python-lint --disable-gcov --disable-gcovr"
+EXTRA_OEMAKE += "OLA_DISABLE_PYTHON_LINT=1"
+EXTRA_OEMAKE += "OLA_DISABLE_CPP_LINT=1"
+EXTRA_OEMAKE += "OLA_DISABLE_COVERAGE=1"
 
 # UNBUILDABLE DUE TO SRCREV
 #DESCRIPTION = "Open Lighting Architecture (OLA)"
