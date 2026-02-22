@@ -3,7 +3,7 @@ LICENSE = "GPL-2.0-or-later"
 LIC_FILES_CHKSUM = "file://COPYING;md5=751419260aa954499f7abaabaa882bbe"
 
 SRC_URI = "git://github.com/OpenLightingProject/ola.git;branch=master;protocol=https;destsuffix=git"
-SRCREV = "${AUTOREV}"
+SRCREV = "0.10.8"
 
 PV = "1.0+git${SRCPV}"
 S = "${WORKDIR}/git"
@@ -11,6 +11,7 @@ S = "${WORKDIR}/git"
 inherit autotools pkgconfig
 
 DEPENDS = "protobuf protobuf-native libmicrohttpd bison-native flex-native python3-native"
+EXTRA_OECONF += "--disable-python"
 
 # Options aren't recognized by OLA
 #EXTRA_OECONF += " --disable-cpp-lint --disable-python-lint --disable-gcov --disable-gcovr"
