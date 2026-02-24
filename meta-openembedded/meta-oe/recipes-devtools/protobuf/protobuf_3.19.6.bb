@@ -4,7 +4,7 @@ LICENSE = "BSD-3-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=3c1f0f3e3e5f3b6b3e8f0b8b3e8f0b8b"
 
 SRC_URI = "https://github.com/protocolbuffers/protobuf/archive/v3.19.6.tar.gz"
-SRC_URI[sha256sum] = "f0e5b1f5c1c8b6b1e8f0b8b3e8f0b8b3e8f0b8b3e8f0b8b3e8f0b8b3e8f0b8b3"
+SRC_URI[sha256sum] = "9a301cf94a8ddcb380b901e7aac852780b826595075577bb967004050c835056"
 
 S = "${WORKDIR}/protobuf-3.19.6"
 
