@@ -8,9 +8,10 @@ SRC_URI[sha256sum] = "9a301cf94a8ddcb380b901e7aac852780b826595075577bb967004050c
 
 S = "${WORKDIR}/protobuf-3.19.6"
 
-inherit cmake
+inherit autotools pkgconfig
 
 EXTRA_OECMAKE += "-Dprotobuf_BUILD_TESTS=OFF"
+EXTRA_OECONF += "--disable-shared --enable-static"
 
 # WAS BEFORE VVVVVVVV
 
