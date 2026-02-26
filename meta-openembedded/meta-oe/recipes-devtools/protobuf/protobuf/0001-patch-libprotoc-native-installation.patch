@@ -1,0 +1,10 @@
+--- a/src/Makefile.am
++++ b/src/Makefile.am
+@@ -27,6 +27,7 @@ noinst_LTLIBRARIES = libprotobuf-lite.la libprotobuf.la
+ # protoc (the protocol compiler) is built from these sources.
+ bin_PROGRAMS = protoc
+ protoc_SOURCES = google/protobuf/compiler/main.cc
++protoc_LDADD = libprotoc.la libprotobuf.la libprotobuf-lite.la
+
+ # libprotoc is the library which protoc links against.
+ libprotoc_la_SOURCES = \
